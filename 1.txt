@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /home/*/Загрузки;
+wget https://github.com/deemru/Chromium-Gost/releases/download/103.0.5060.134/chromium-gost-103.0.5060.134-linux-amd64.deb;
+wget https://ds-plugin.gosuslugi.ru/plugin/upload/assets/distrib/IFCPlugin-x86_64.deb;
+sudo dpkg -i chromium-gost-103.0.5060.134-linux-amd64.deb;
+sudo dpkg -i IFCPlugin-x86_64.deb;
+sudo ln -s /etc/opt/chrome/native-messaging-hosts/ru.rtlabs.ifcplugin.json /etc/chromium/native-messaging-hosts;
+cd /etc/opt/cprocsp;
+rm config64.ini;
+wget https://github.com/helg0002/crypto/blob/main/config64.ini;
+cd /etc;
+wget https://www.cryptopro.ru/sites/default/files/public/faq/ifcx64.cfg;
